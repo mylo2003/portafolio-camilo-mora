@@ -1,0 +1,45 @@
+---
+import InstagramIcon from "./icons/Instagram.astro";
+import GitHubIcon from "./icons/GitHub.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import MailIcon from "./icons/Mail.astro";
+---
+
+<div {...Astro.props} class="w-[100px] flex">
+  <ul class="flex gap-5">
+    <a
+      class="hover:scale-110 transition-all ease-in-out"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/mylo2003"
+      aria-label="Ir a página de GitHub"
+      title="Página de GitHub de Camilo Mora"><GitHubIcon /></a
+    >
+    <a
+      class="hover:scale-110 transition-all ease-in-out"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.linkedin.com/in/camilomora23/"
+      aria-label="Ir a página de LinkedIn"
+      title="Página de LinkedIn de Camilo Mora"
+      ><LinkedInIcon /></a
+    >
+    <a
+      class="hover:scale-110 transition-all ease-in-out"
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://www.instagram.com/mylo_23/"
+      aria-label="Ir a página de Instagram"
+      title="Página de Instagram de Camilo Mora"
+      ><InstagramIcon /></a
+    >
+    <a
+      class="hover:scale-110 transition-all ease-in-out"
+      rel="noopener noreferrer"
+      href="mailto:camiloalf23@gmail.com"
+      aria-label="Enviar un correo electrónico a Camilo Mora"
+      title="Enviar un correo electrónico a Camilo Mora"
+      ><MailIcon class="size-7"/></a
+    >
+  </ul>
+</div>

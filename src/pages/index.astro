@@ -1,19 +1,40 @@
 ---
-import Aside from "../components/Aside.astro";
+import Socials from "../components/Socials.astro";
 import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Portafolio" watermark="Camilo Mora.">
+<Layout title="Portafolio" watermark="Camilo M.">
   <Container>
-    <div class="flex mt-30">
-      <Aside />
-      <div class="flex-1">
-        <h1 class="text-4xl font-bold mb-4">hey, qué tal, soy <span class="text-green-500">Camilo Mora</span></h1>
-        <p class="text-lg mb-6">
-          Aquí encontrarás una colección de mis proyectos y trabajos más recientes.
-        </p>
-        <p class="text-lg">
-    </div>
+    <section class="flex flex-col">
+      <h1 class="text-3xl mb-4 animate-spawn">
+        hey, soy
+        <span
+          class="bg-gradient-to-r from-green-900 via-green-500 to-white inline-block text-transparent bg-clip-text relative link-underline transition-transform"
+        >
+          Camilo Mora
+        </span>, desarrollador fullstack
+      </h1>
+      <p class="font-thin animate-spawn text-pretty leading-7">
+        Estudiante de Ingeniería en Sistemas. (décimo semestre), me caracterizo
+        por ser autodidacta y altamente colaborativo. <br />
+        Mi búsqueda constante de experiencia y aprendizaje es impulsada por mi firme
+        deseo de avanzar. <br />
+        Encaro cada desafío como una oportunidad para crecer y destacar en mi campo.
+      </p>
+      <div class="mt-8">
+        <a
+          class="text-xl bg-gradient-to-r from-white via-green-500 to-green-900 inline-block text-transparent bg-clip-text relative link-underline transition-transform font-normal"
+          target="_blank"
+          href="https://drive.google.com/file/d/10S9aD9z_S-n_xrbLKGHbgO_Rw1t-Nx23/view"
+          aria-label="Ver currículum"
+          title="Ver currículum de Camilo Mora"
+        >
+          Ver currículum ...
+        </a>
+      </div>
+
+      <Socials class="animate-spawn opacity-50 z-40 mt-4" />
+    </section>
   </Container>
 </Layout>

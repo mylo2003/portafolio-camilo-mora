@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+@theme {
+  --animate-spawn: spawn 1s ease-in-out;
+  @keyframes spawn {
+    0% {
+      opacity: 0;
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 1px;
+  width: 0%;
+  background-color: rgba(107, 114, 128, 0.5); 
+  transform: translateX(-50%);
+  transition: width 300ms ease;
+  pointer-events: none;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
