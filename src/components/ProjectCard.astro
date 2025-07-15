@@ -6,37 +6,37 @@ const { project } = Astro.props;
 const { title, description, image, github, link, responsabilities, date, techs } = project;
 ---
 
-<li class="mb-10 ms-4">
+<li class="mb-20 ms-4">
   <div class="absolute w-3 h-3 rounded-full mt-1.5 -start-1.5 border border-gray-900 bg-gray-700"></div>
-  <time class="mb-1 text-sm font-normal leading-none opacity-50">{date}</time>
-  <h3 class="text-lg font-semibold">{title}</h3>
-  <p class="mb-4 text-base font-normal opacity-80">
+  <time class="mb-1 text-xs md:text-sm font-normal leading-none opacity-50">{date}</time>
+  <h3 class="text-sm md:text-lg font-semibold mb-2">{title}</h3>
+  <p class="mb-4 text-sm md:text-base font-normal opacity-80">
     {description}
   </p>
-  <div class="flex h-[300px] w-full mr-2 gap-2">
-    <img src={image} alt={`Captura de pantalla del proyecto ${title}`} class="rounded-lg bg-gray-800/30 w-1/2" />
-    <div class="bg-gray-800/30 p-4 rounded-lg w-1/2">
-      <h3 class="font-semibold text-white">
+  <div class="flex flex-col md:flex-row w-full mr-2 gap-2">
+    <img src={image} alt={`Captura de pantalla del proyecto ${title}`} class="rounded-lg md:w-1/2" />
+    <div class="bg-gray-800/30 p-4 rounded-lg md:w-1/2">
+      <h3 class="font-semibold text-white text-sm md:text-base mb-2">
         Responsabilidades
       </h3>
       <div class="h-full">
-        <ul class="font-normal text-gray-400 h-2/3 ">
+        <ul class="font-normal text-xs md:text-base text-gray-400 h-2/3 list-disc list-inside">
           {
             responsabilities?.map((item) => (
-            <li class="list-disc list-inside">{item}</li>
+            <li>{item}</li>
           ))}
         </ul>
-        <div class="h-1/3 w-full flex items-center gap-2">
+        <div class="h-1/3 w-full flex items-center gap-2 mt-2">
           <div class="flex gap-2 w-1/2 justify-start">
             {
-              <TechBill className="size-6" icons={techs.map(tech => tech)} />
+              <TechBill className="size-4 md:size-6" icons={techs.map(tech => tech)} />
             }
           </div>
           <div class="flex items-center gap-2 w-1/2 justify-end border-l border-gray-500">
-            <a href={github} target="_blank" rel="noopener noreferrer"><GitHub /></a>
+            <a href={github} target="_blank" rel="noopener noreferrer"><GitHub class="hover:text-green-400" /></a>
             <a
                 href={link}
-                class="button-style !text-sm cursor-pointer  text-center"
+                class="button-style"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={title}

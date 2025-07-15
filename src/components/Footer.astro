@@ -1,0 +1,19 @@
+---
+  import Briefcase from "./icons/Briefcase.astro";
+  import Code from "./icons/Code.astro";
+  import Hability from "./icons/Hability.astro";
+  import Mail from "./icons/Mail.astro";
+  const { currentPath } = Astro.props;
+---
+<footer class="md:hidden px-10 flex items-center mt-15 mx-auto gap-20 rounded-lg fixed bottom-0 z-50 h-16 w-full backdrop-blur-lg">
+  <nav class="w-full">
+    <ul class="flex justify-between items-center font-thin">
+      <a class={`${currentPath === "/projects" && "text-green-700"} font-normal`} href="/projects" aria-label="Ir a sección de proyectos" title="Sección de proyectos"><Code /></a>
+      <a class={`${currentPath === "/experience" && "text-green-700"} font-normal`} href="/experience" aria-label="Ir a sección de experiencia" title="Sección de experiencia"><Briefcase /></a>
+      <a class={`${currentPath === "/" && "text-green-700"} font-normal text-2xl`} href="/" aria-label="Ir a página inicio" title="Página de inicio">CM</a>
+      <a class={`${currentPath === "/habilities" && "text-green-700"} font-normal`} href="/habilities" aria-label="Ir a sección de habilidades" title="Sección de habilidades"><Hability /></a>
+      <a class={`${currentPath === "/contact" && "text-green-700"} font-normal`} href="/contact" aria-label="Ir a sección de contacto" title="Sección de contacto"><Mail /></a>
+    </ul>
+  </nav>
+</footer>
+

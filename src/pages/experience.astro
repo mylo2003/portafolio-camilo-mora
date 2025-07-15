@@ -2,6 +2,7 @@
 import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 import ExperienceCard from "../components/ExperienceCard.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
 
 const EXPERIENCES = [
   {
@@ -25,8 +26,11 @@ const EXPERIENCES = [
 <Layout title="Experiencia | Camilo Mora" watermark="Experiencia" currentPath="/experience">
   <Container>
     <section>
-      <h2 class="text-center text-pretty mb-4">Mi experiencia me ha permitido expandir mis habilidades no solo como programador sino como compañero de trabajo.</h2>
-      <ol class="relative border-s border-gray-700 scroll-auto max-h-[450px] overflow-auto backdrop-blur-sm backdrop-opacity-50">
+      <div class="flex gap-2">
+        <Briefcase class="opacity-50 size-12 md:size-6" />
+        <h2 class="mb-4 text-sm md:text-base">Mi experiencia me ha permitido expandir mis habilidades no solo como programador sino como compañero de trabajo.</h2>
+      </div>
+      <ol class="relative border-s pb-20 border-gray-700 h-[calc(100vh-200px)] overflow-auto backdrop-blur-sm backdrop-opacity-50">
         {EXPERIENCES.map(experience => (
           <ExperienceCard experience={experience} />
         ))}    
@@ -34,10 +38,3 @@ const EXPERIENCES = [
     </section>
   </Container>
 </Layout>
-
-<style>
-  ol {
-    scrollbar-width: thin;
-    scrollbar-color: #4ade8011 transparent;
-  }
-</style>

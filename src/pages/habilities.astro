@@ -2,6 +2,7 @@
   import Container from "../components/Container.astro";
   import Layout from "../layouts/Layout.astro";
   import TechBill from "../components/TechBill.astro";
+import Hability from "../components/icons/Hability.astro";
 
   const technologies = { 
     backend: [{icon: "JavaIcon"}, {icon: "SpringIcon"}, {icon: "CsharpIcon"}, {icon: "NETIcon"}, {icon: "PostgreSQLIcon"}],
@@ -13,31 +14,34 @@
 <Layout title="Habilidades | Camilo Mora" watermark="Habilidades" currentPath="/habilities">
   <Container>
     <section class="max-w-3xl mx-auto">
-      <div class="mb-10 text-center text-lg text-pretty">
-        Tecnologías y herramientas con las que trabajo, sigo aprendiendo y mejorando constantemente.
+      <div class="flex gap-2">
+          <Hability class="opacity-50 size-10 md:size-6" />
+          <h3 class="mb-10 text-sm md:text-base">
+            Tecnologías y herramientas con las que trabajo, sigo aprendiendo y mejorando constantemente.
+          </h3>
       </div>
-      <div class="grid grid-cols-3 gap-10 max-w-3xl min-h-96 rounded-lg p-4 text-center">
-        <div class="row-span-2 rounded-md border-b border-transparent hover:-translate-y-4 hover:-translate-x-2 transition ease-in-out hover:text-2xl hover:bg-gradient-to-t hover:from-[#030712] hover:via-transparent to-transparent hover:inline-block bg-clip-content relative link-underline">
-          <div class="mb-5 text-xl">BackEnd</div>
-          <div class="flex flex-wrap gap-10 justify-center border-t pt-4 rounded-xl border-gray-500 backdrop-blur-xs">
+      <div class="grid grid-cols-3 gap-10 max-w-3xl md:min-h-96 rounded-lg p-4 text-center overflow-y-auto overflow-x-hidden">
+        <div class="row-span-2 h-full rounded-md border-b border-transparent hover:-translate-y-4 hover:-translate-x-2 transition ease-in-out hover:bg-gradient-to-t hover:from-[#030712] hover:via-transparent to-transparent hover:inline-block bg-clip-content relative link-underline">
+          <div class="mb-5 md:text-xl">BackEnd</div>
+          <div class="flex flex-wrap gap-5 md:gap-10 justify-center border-t pt-4 rounded-xl border-gray-500 backdrop-blur-xs">
             {
-              <TechBill className="size-15" icons={technologies.backend.map(tech => tech.icon)} />
+              <TechBill className="size-10 md:size-15" icons={technologies.backend.map(tech => tech.icon)} />
             }
           </div>
         </div>
-        <div class="row-span-2 max-h-96 -translate-y-5 rounded-md border-b border-transparent hover:-translate-y-8 transition ease-in-out hover:text-2xl hover:bg-gradient-to-t hover:from-[#030712] hover:via-transparent to-transparent hover:inline-block bg-clip-content relative link-underline">
-          <div class="mb-5 text-xl">FrontEnd</div>
-          <div class="flex flex-wrap gap-10 justify-center border-t pt-4 rounded-xl border-gray-500 backdrop-blur-xs">
+        <div class="row-span-2 h-full -translate-y-5 rounded-md border-b border-transparent hover:-translate-y-8 transition ease-in-out hover:bg-gradient-to-t hover:from-[#030712] hover:via-transparent to-transparent hover:inline-block bg-clip-content relative link-underline">
+          <div class="mb-5 md:text-xl ">FrontEnd</div>
+          <div class="flex flex-wrap gap-5 md:gap-10 justify-center border-t pt-4 rounded-xl border-gray-500 backdrop-blur-xs">
             {
-              <TechBill className="size-15" icons={technologies.frontend.map(tech => tech.icon)} />
+              <TechBill className="size-10 md:size-15" icons={technologies.frontend.map(tech => tech.icon)} />
             }
           </div>
         </div>
-        <div class="row-span-2 max-h-96 rounded-md border-b border-transparent hover:-translate-y-4 hover:translate-x-2 transition ease-in-out hover:text-2xl hover:bg-gradient-to-t hover:from-[#030712] hover:via-transparent to-transparent hover:inline-block bg-clip-content relative link-underline">
-          <div class="mb-5 text-xl">Herramientas</div>
-          <div class="flex flex-wrap gap-10 justify-center border-t pt-4 rounded-xl border-gray-500 backdrop-blur-xs">
+        <div class="row-span-2 h-full rounded-md border-b border-transparent hover:-translate-y-4 hover:translate-x-2 transition ease-in-out hover:bg-gradient-to-t hover:from-[#030712] hover:via-transparent to-transparent hover:inline-block bg-clip-content relative link-underline">
+          <div class="mb-5 md:text-xl">Herramientas</div>
+          <div class="flex flex-wrap gap-5 md:gap-10 justify-center border-t pt-4 rounded-xl border-gray-500 backdrop-blur-xs">
             {
-              <TechBill className="size-15" icons={technologies.tools.map(tech => tech.icon)} />
+              <TechBill className="size-10 md:size-15" icons={technologies.tools.map(tech => tech.icon)} />
             }
           </div>
         </div>

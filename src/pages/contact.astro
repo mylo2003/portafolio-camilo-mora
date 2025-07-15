@@ -4,16 +4,17 @@ import Socials from "../components/Socials.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Contacto" watermark="Contacto" currentPath="/contact">
+<Layout title="Contacto | Camilo Mora" watermark="Contacto" currentPath="/contact">
   <Container>
     <section class="flex flex-col items-center mt-20">
-      <h2 class="text-4xl mb-4 text-center text-pretty"> Vamos a trabajar juntos, estoy abierto a nuevas
-        <span class="font-semibold opacity-100">oportunidades</span>.</h2>
-      <p class="text-lg mb-8 opacity-70">
+      <h2 class="text-3xl md:text-4xl mb-4 text-center text-pretty"> Vamos a trabajar juntos, estoy abierto a nuevas
+        <span class="font-semibold opacity-100">oportunidades</span>.
+      </h2>
+      <span class="text-lg md:text-xl mb-8 opacity-70">
        Ponte en contacto conmigo.
-      </p>
+      </span>
       <a
-        class="button-style"
+        class="button-style !text-lg md:!text-xl !px-4"
         href="mailto:camiloalf23@gmail.com"
         rel="noopener noreferrer"
         href="mailto:camiloalf23@gmail.com"
@@ -21,7 +22,7 @@ import Layout from "../layouts/Layout.astro";
         title="Enviar un correo electrónico a Camilo Mora">Envíame un correo</a
       >
       <Socials class="text-center opacity-60 mt-10" />
-      <p class="text-lg opacity-60">camiloalf23@gmail.com</p>
+      <p class="md:text-lg opacity-60">camiloalf23@gmail.com</p>
     </section>
   </Container>
 </Layout>

@@ -2,7 +2,7 @@
 import Container from "../components/Container.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
-
+import Code from "../components/icons/Code.astro";
 
 const PROJECTS = [
   {
@@ -86,8 +86,11 @@ const PROJECTS = [
 <Layout title="Proyectos | Camilo Mora" watermark="Proyectos" currentPath="/projects">
   <Container>
     <section>
-      <h2 class="text-center text-pretty mb-4">Estos son algunos proyectos que me han ayudado a mejorar mis habilidades como desarrollador además de mis habilidades sociales.</h2>
-      <ol class="relative border-s border-gray-700 scroll-auto max-h-[450px] overflow-auto backdrop-blur-sm backdrop-opacity-50">
+      <div class="flex gap-2">
+        <Code class="opacity-50 size-12 md:size-6" />
+        <h2 class="mb-4 text-sm md:text-base">Estos son algunos proyectos que me han ayudado a mejorar mis habilidades como desarrollador además de mis habilidades sociales.</h2>
+      </div>
+      <ol class="relative border-s pb-20 border-gray-700 h-[calc(100vh-200px)] overflow-auto backdrop-blur-sm backdrop-opacity-50">
         {PROJECTS.map(project => (
           <ProjectCard project={project} />
         ))}      
@@ -95,11 +98,3 @@ const PROJECTS = [
     </section>
   </Container>
 </Layout>
-
-
-<style>
-  ol {
-    scrollbar-width: thin;
-    scrollbar-color: #4ade8011 transparent;
-  }
-</style>
