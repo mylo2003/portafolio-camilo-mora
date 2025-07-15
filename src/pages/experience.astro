@@ -1,12 +1,36 @@
 ---
 import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
+import ExperienceCard from "../components/ExperienceCard.astro";
+
+const EXPERIENCES = [
+  {
+    title: "Sistema de Gestión de Terminal de Transporte",
+    description: "Como parte de un equipo de desarrollo, contribuí al ciclo de vida completo de una aplicación de escritorio diseñada para la gestión y recaudación de ingresos de una terminal de transporte. Desde la planificación inicial hasta la entrega final, aplicamos la metodología Scrum, organizando nuestras tareas mediante Jira y programando reuniones periódicas para evaluar los progresos.",
+    link: "#",
+    github: "#",
+    image: "#",
+    responsabilities: [
+      "Diseño UI/UX utilizando Figma para wireframes y Lucidchart para definir las relaciones y arquitectura del sistema.",
+      "Desarrollo de base de datos con PostgreSQL, modelando e implementando toda la estructura de datos.",
+      "Desarrollo backend usando Java y Spring Boot, construyendo una API REST robusta y escalable.",
+      "Desarrollo frontend con React.js integrado en Electron para crear una aplicación de escritorio multiplataforma.",
+    ],
+    date: "Enero 2025 - Mayo 2025 - 5 meses Freelance",
+    techs: ["JavaIcon", "SpringIcon", "ElectronIcon", "ReactIcon", "TailwindIcon", "PostgreSQLIcon", "Zustand", "Figma"]
+  },
+];
 ---
 
 <Layout title="Experiencia | Camilo Mora" watermark="Experiencia" currentPath="/experience">
   <Container>
     <section>
-      
+      <h2 class="text-center text-pretty mb-4">Mi experiencia me ha permitido expandir mis habilidades no solo como programador sino como compañero de trabajo.</h2>
+      <ol class="relative border-s border-gray-700 scroll-auto max-h-[450px] overflow-auto backdrop-blur-sm backdrop-opacity-50">
+        {EXPERIENCES.map(experience => (
+          <ExperienceCard experience={experience} />
+        ))}    
+      </ol>
     </section>
   </Container>
 </Layout>

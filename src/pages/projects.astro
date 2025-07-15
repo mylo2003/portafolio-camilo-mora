@@ -18,7 +18,7 @@ const PROJECTS = [
       "Consumo de la API usando React Native y Expo Go. Manejando estados globales con Zustand.",
     ],
     date: "Enero 2025 - Mayo 2025",
-    techs: ["JavaIcon", "SpringIcon", "ReactNativeIcon", "ExpoGoIcon", "TailwindIcon", "PostgresIcon"]
+    techs: ["JavaIcon", "SpringIcon", "ReactNativeIcon", "ExpoGoIcon", "TailwindIcon", "PostgreSQLIcon"]
   },
   {
     title: "Encriptador de archivos - EncryperMylo",
@@ -48,7 +48,7 @@ const PROJECTS = [
       "Uso de Vite para la construcción del proyecto."
     ],
     date: "Mayo 2024",
-    techs: ["ReactIcon", "TailwindIcon", "JavaScriptIcon", "ViteIcon"]
+    techs: ["ReactIcon", "JavaScriptIcon", "TailwindIcon", "ViteIcon"]
   },
   {
     title: "Buscador de películas - Mylo Movies",
@@ -86,11 +86,11 @@ const PROJECTS = [
 <Layout title="Proyectos | Camilo Mora" watermark="Proyectos" currentPath="/projects">
   <Container>
     <section>
-      <h2 class="text-center text-pretty mb-4">Estos son algunos proyectos que me han ayudado a mejorar mis habilidades como desarrollador además de mis habilidades sociales</h2>
+      <h2 class="text-center text-pretty mb-4">Estos son algunos proyectos que me han ayudado a mejorar mis habilidades como desarrollador además de mis habilidades sociales.</h2>
       <ol class="relative border-s border-gray-700 scroll-auto max-h-[450px] overflow-auto backdrop-blur-sm backdrop-opacity-50">
         {PROJECTS.map(project => (
           <ProjectCard project={project} />
-        ))}
+        ))}      
       </ol>
     </section>
   </Container>
