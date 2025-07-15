@@ -29,3 +29,8 @@
 .link-underline:hover::after {
   width: 100%;
 }
+
+
+.button-style {
+  @apply inline-block px-4 py-2 text-2xl font-normal rounded-3xl border border-gray-700 transition-colors ease-in-out bg-gradient-to-r from-green-900 via-green-500 to-white text-transparent bg-clip-text hover:bg-white hover:text-black hover:bg-clip-padding;
+}

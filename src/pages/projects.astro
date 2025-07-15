@@ -1,6 +1,105 @@
 ---
+import Container from "../components/Container.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
+
+
+const PROJECTS = [
+  {
+    title: "App móvil para gestión de tutorías universitarias",
+    description: "Junto con mi equipo de 4 personas, desarrollamos una aplicación móvil para gestionar tutorías universitarias. La aplicación facilita la interacción entre estudiantes y tutores.",
+    link: "https://github.com/mariavnn/Reserva-tutorias-app",
+    github: "https://github.com/mylo2003/TutoriasBackend",
+    image: "/projects/TutoriaApp.webp",
+    responsabilities: [
+      "Creación de relaciones de la base de datos. Así como el manejo eficiente de persistencia de datos.",
+      "Desarrollo de API RESTful en Spring Boot para todo el manejo de tutorías.",
+      "Implementación de la lógica de negocio y conexión a la base de datos.",
+      "Consumo de la API usando React Native y Expo Go. Manejando estados globales con Zustand.",
+    ],
+    date: "Enero 2025 - Mayo 2025",
+    techs: ["JavaIcon", "SpringIcon", "ReactNativeIcon", "ExpoGoIcon", "TailwindIcon", "PostgresIcon"]
+  },
+  {
+    title: "Encriptador de archivos - EncryperMylo",
+    description: "Como proyecto para materia seguridad informática, desarrollé un sistema web en Spring Boot que permite la encriptación y desencriptación segura de archivos de cualquier tipo, con soporte para múltiples algoritmos criptográficos y opciones de compresión.",
+    link: "https://encrypter-mylo-front.vercel.app/",
+    github: "https://github.com/mylo2003/EncrypterMylo",
+    image: "/projects/Encriptador.webp",
+    responsabilities: [
+      "Creación de API RESTful para encriptación y desencriptación de archivos en Spring Boot.",
+      "Implementación de algoritmos criptográficos ya existentes.",
+      "Creación de una interfaz de usuario con React y TypeScript.",
+      "Diseño responsivo utilizando Tailwind CSS.",
+    ],
+    date: "Mayo 2025",
+    techs: ["JavaIcon", "SpringIcon", "ReactIcon", "TypeScriptIcon", "TailwindIcon"]
+  },
+  {
+    title: "Ecommerce - Mylommerce",
+    description: "Mylommerce fue un proyecto realizado para un curso en la universidad. Es un ecommerce que ayudó a aprender a consumir APIs además de estilizar con TailwindCss.",
+    link: "https://mylo-ecommerce.vercel.app/",
+    github: "https://github.com/mylo2003/mylo-ecommerce",
+    image: "/projects/Ecommerce.webp",
+    responsabilities: [
+      "Consumo de API RESTful para productos.",
+      "Desarrollo de la interfaz de usuario con React.",
+      "Estilización con Tailwind CSS.",
+      "Uso de Vite para la construcción del proyecto."
+    ],
+    date: "Mayo 2024",
+    techs: ["ReactIcon", "TailwindIcon", "JavaScriptIcon", "ViteIcon"]
+  },
+  {
+    title: "Buscador de películas - Mylo Movies",
+    description: "Mylo Movies fue un proyecto de JavaScript vanilla. Estoy orgulloso de la creatividad que le puse en la creación de este sitio.",
+    link: "https://mylo-movie-api-project.vercel.app/",
+    github: "https://github.com/mylo2003/mylo-movie-api-project",
+    image: "/projects/Movies.webp",
+    responsabilities: [
+      "Consumo de la API theMovieDB con la biblioteca Axios para obtener información de películas.",
+      "Estilización con TailwindCSS",
+      "Manejo eficiente del DOM con JavaScript.",
+      "Implementación de un sistema de búsqueda y filtrado de películas."
+    ],
+    date: "Marzo 2024",
+    techs: ["JavaScriptIcon", "HtmlIcon", "CssIcon", "TailwindIcon"]
+  },
+  {
+    title: "Generador de Ricks - Rick Generator",
+    description: "Rick Generator fue un proyecto hecho con el propósito de aprender a consumir APIs. Fue divertido porque me encanta Rick y Morty.",
+    link: "https://api-rick-and-morty-project.vercel.app/",
+    github: "https://github.com/mylo2003/API-RickAndMorty-Project",
+    image: "/projects/RickGenerator.webp",
+    responsabilities: [
+      "Consumo de la API Rick y Morty con Fetch para obtener información de personajes.",
+      "Estilización con TailwindCSS",
+      "Implementación de un sistema de generación aleatorio de personajes de la serie."
+    ],
+    date: "Febrero 2024",
+    techs: ["JavaScriptIcon", "HtmlIcon", "TailwindIcon"]
+  }
+];
+
 ---
 
-<Layout title="Projects" watermark="Proyectos">
+<Layout title="Proyectos | Camilo Mora" watermark="Proyectos" currentPath="/projects">
+  <Container>
+    <section>
+      <h2 class="text-center text-pretty mb-4">Estos son algunos proyectos que me han ayudado a mejorar mis habilidades como desarrollador además de mis habilidades sociales</h2>
+      <ol class="relative border-s border-gray-700 scroll-auto max-h-[450px] overflow-auto backdrop-blur-sm backdrop-opacity-50">
+        {PROJECTS.map(project => (
+          <ProjectCard project={project} />
+        ))}
+      </ol>
+    </section>
+  </Container>
 </Layout>
+
+
+<style>
+  ol {
+    scrollbar-width: thin;
+    scrollbar-color: #4ade8011 transparent;
+  }
+</style>

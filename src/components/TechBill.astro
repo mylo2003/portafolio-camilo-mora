@@ -1,0 +1,49 @@
+---
+  import JavaIcon from "../components/icons/JavaIcon.astro";
+  import CsharpIcon from "../components/icons/CsharpIcon.astro";
+  import SpringIcon from "../components/icons/SpringIcon.astro";
+  import NETIcon from "../components/icons/NETIcon.astro";
+  import ReactIcon from "../components/icons/ReactIcon.astro";
+  import ReactNativeIcon from "../components/icons/ReactIcon.astro";
+  import AstroIcon from "../components/icons/AstroIcon.astro";
+  import JavaScriptIcon from "../components/icons/JavaScriptIcon.astro";
+  import TypeScriptIcon from "../components/icons/TypeScriptIcon.astro";
+  import TailwindIcon from "../components/icons/TailwindcssIcon.astro";
+  import HtmlIcon from "../components/icons/HtmlIcon.astro";
+  import CssIcon from "../components/icons/CssIcon.astro";
+  import ViteIcon from "../components/icons/ViteIcon.astro";
+  import PostgresIcon from "../components/icons/PostgresIcon.astro";
+  import PostmanIcon from "../components/icons/PostmanIcon.astro";
+  import GitIcon from "../components/icons/GitIcon.astro";
+  import GitHubIcon from "../components/icons/GitHub.astro";
+  import ExpoGoIcon from "./icons/ExpoGoIcon.astro";
+  
+  const { icons, className } = Astro.props;
+
+  const iconMap = {
+    ViteIcon,
+    AstroIcon,
+    JavaScriptIcon,
+    TypeScriptIcon,
+    JavaIcon,
+    CsharpIcon,
+    ReactIcon,
+    ReactNativeIcon,
+    TailwindIcon,
+    SpringIcon,
+    HtmlIcon,
+    CssIcon,
+    PostgresIcon,
+    PostmanIcon,
+    GitIcon,
+    GitHubIcon,
+    NETIcon,
+    ExpoGoIcon
+  };
+
+---
+
+{icons?.map(iconName => {
+  const IconComponent = iconMap[iconName];
+  return IconComponent ? <IconComponent class={className} /> : null;
+})}

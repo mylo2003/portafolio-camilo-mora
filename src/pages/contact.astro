@@ -4,21 +4,21 @@ import Socials from "../components/Socials.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Contacto" watermark="Contacto">
+<Layout title="Contacto" watermark="Contacto" currentPath="/contact">
   <Container>
-    <section class="flex flex-col items-center font-thin">
-      <h2 class="text-5xl mb-4">Ponte en contacto conmigo</h2>
-      <p class="text-lg mb-8 opacity-60">
-        Vamos a trabajar juntos, estoy abierto a nuevas
-        <span class="font-bold opacity-100">oportunidades</span>.
+    <section class="flex flex-col items-center mt-20">
+      <h2 class="text-4xl mb-4 text-center text-pretty"> Vamos a trabajar juntos, estoy abierto a nuevas
+        <span class="font-semibold opacity-100">oportunidades</span>.</h2>
+      <p class="text-lg mb-8 opacity-70">
+       Ponte en contacto conmigo
       </p>
       <a
-        class="px-4 py-2 text-2xl font-normal rounded-3xl border border-gray-700 transition-all ease-in-out bg-gradient-to-r from-green-900 via-green-500 to-white inline-block text-transparent bg-clip-text hover:bg-white hover:text-black hover:bg-clip-padding hover:ease-in-out"
+        class="button-style"
         href="mailto:camiloalf23@gmail.com"
         rel="noopener noreferrer"
         href="mailto:camiloalf23@gmail.com"
         aria-label="Enviar un correo electrónico a Camilo Mora"
-        title="Enviar un correo electrónico a Camilo Mora">Envíame un correo!</a
+        title="Enviar un correo electrónico a Camilo Mora">Envíame un correo</a
       >
       <Socials class="text-center opacity-60 mt-10" />
       <p class="text-lg opacity-60">camiloalf23@gmail.com</p>

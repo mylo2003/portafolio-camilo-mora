@@ -4,7 +4,7 @@
 	import '@fontsource-variable/quicksand'
 	import '../styles/global.css';
 
-	const { title, watermark } = Astro.props
+	const { title, currentPath, watermark } = Astro.props
 ---
 
 <!doctype html>
@@ -17,11 +17,11 @@
 		<title>{title}</title>
 		<ClientRouter />
 	</head>
-	<body>
+	<body class="overflow-y-hidden">
 		<div class="absolute bottom-0 -z-10 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_0.5px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_0.5px,transparent_1px)] bg-[size:6rem_6rem]"></div>
 		<div class="absolute inset-0 -z-20 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#030712_40%,#0B3B1A_100%)]"></div>
-		<div class="animate-spawn absolute -bottom-16 z-10 -left-3 text-[180px] font-thin text-[#9e9e9c]/5 select-none font-serif ">{watermark}</div>
-		<Header />
+		<div class="animate-spawn absolute -bottom-16 z-10 -left-3 text-[165px] text-[#9e9e9c]/5 select-none font-serif ">{watermark}</div>
+		<Header currentPath={currentPath} />
 		<slot />
 	</body>
 </html>
@@ -35,5 +35,10 @@
 		scroll-behavior: smooth;
 		color-scheme: light dark;
 		font-family: 'Quicksand Variable', sans-serif;
+		font-weight: 100;
+	}
+	body::selection {
+		color: white;
+		background-color: gray;
 	}
 </style>

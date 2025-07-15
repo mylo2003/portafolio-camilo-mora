@@ -4,10 +4,14 @@ import Container from "../components/Container.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Portafolio" watermark="Camilo M.">
+<Layout
+  title="Portafolio | Camilo Mora desarrollador y programador"
+  watermark="Camilo M."
+  currentPath="/"
+>
   <Container>
-    <section class="flex flex-col">
-      <h1 class="text-3xl mb-4 animate-spawn">
+    <section class="flex flex-col mt-20 max-w-3xl mx-auto">
+      <h1 class="text-3xl mb-4 animate-spawn font-normal">
         hey, soy
         <span
           class="bg-gradient-to-r from-green-900 via-green-500 to-white inline-block text-transparent bg-clip-text relative link-underline transition-transform"
@@ -15,22 +19,32 @@ import Layout from "../layouts/Layout.astro";
           Camilo Mora
         </span>, desarrollador fullstack
       </h1>
-      <p class="font-thin animate-spawn text-pretty leading-7">
-        Estudiante de Ingeniería en Sistemas. (décimo semestre), me caracterizo
-        por ser autodidacta y altamente colaborativo. <br />
+      <p class="animate-spawn text-pretty leading-7">
+        Estudiante de Ingeniería en Sistemas. (décimo semestre) de la
+        Universidad de Pamplona, me caracterizo por ser autodidacta y altamente
+        colaborativo. <br />
         Mi búsqueda constante de experiencia y aprendizaje es impulsada por mi firme
         deseo de avanzar. <br />
         Encaro cada desafío como una oportunidad para crecer y destacar en mi campo.
       </p>
-      <div class="mt-8">
+      <div class="mt-8 animate-spawn flex justify-between">
         <a
           class="text-xl bg-gradient-to-r from-white via-green-500 to-green-900 inline-block text-transparent bg-clip-text relative link-underline transition-transform font-normal"
           target="_blank"
+          rel="noopener noreferrer"
           href="https://drive.google.com/file/d/10S9aD9z_S-n_xrbLKGHbgO_Rw1t-Nx23/view"
           aria-label="Ver currículum"
           title="Ver currículum de Camilo Mora"
         >
-          Ver currículum ...
+          Ver currículum
+        </a>
+        <a
+          class="text-xl bg-gradient-to-r from-green-900 via-green-500 to-white inline-block text-transparent bg-clip-text relative link-underline transition-transform font-normal"
+          href="/experience"
+          aria-label="Ver currículum"
+          title="Ver currículum de Camilo Mora"
+        >
+          Ir a experiencia 
         </a>
       </div>
 
